@@ -41,8 +41,7 @@ PROVIDERS = [AItianhu,
              Wewordle,
              You,
              Yqcloud,
-             Wuguokai, V50, Lockchat, Liaobots, GetGpt, Forefront, FastGpt, Equing, EasyChat, DfeHub,
-             AiService]
+             ]
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--thread_id', type=int, default=0)
@@ -61,7 +60,7 @@ def write(context, qa):
 
 
 def ask(context):
-    is_proxy = randint(0, 2)
+    is_proxy = 1
     if is_proxy:
         proxy = FreeProxy(rand=True).get()
         proxy = {'http_proxy': proxy, 'https_proxy': proxy,
